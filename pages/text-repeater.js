@@ -3,6 +3,7 @@ import $ from "jquery";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ClipboardJS from 'clipboard';
+import { NextSeo } from 'next-seo';
 
 export default function textrepeater() {
   const copy = () =>  {     
@@ -74,13 +75,14 @@ $("#number").val('');
 
   return (
     <>
-<Head>
-<title>Text Reapeater</title>
-
-</Head>
+<NextSeo
+      title="Text Reapeater"
+      description="A short description goes here."
+    />
 <ToastContainer />
+<div className='p-4'>
         <textarea className="border border-red-500 w-full rounded p-2" id="text" placeholder="Enter Text" autoComplete="off" rows="5"></textarea>
-        <div className="d-inline-flex ">
+        <div className=" flex ">
           <div className="p-2">
             <b>WORDS:</b>
             <b id="words">0</b>
@@ -90,23 +92,23 @@ $("#number").val('');
             <b id="characters">0</b>
           </div>
         </div>
-        <br />
-        <input className="border border-red-500 w-full rounded p-2" cols="25" type="number" id="number" inputMode="numeric" placeholder="Enter Repetitions Number"
+        <div className="m-4 flex ">
+        <input className="border border-red-500 w-min rounded p-2 h-10" cols="25" type="number" id="number" inputMode="numeric" placeholder="Enter Repetitions Number"
           autoComplete="off" />
-        <br />
-        <div className="m-1">
-          <button onClick={handleClick} className=" bg-green-500 rounded text-white p-2 px-4 m-2" type="button" id="repeatButton1"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 inline">
+       
+        <div className="">
+          <button onClick={handleClick} className=" bg-green-500 rounded text-white p-2 px-4 mx-2" type="button" id="repeatButton1"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 inline">
   <path strokeLinecap="round" strokeLinejoin="round" d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
 </svg>
 &nbsp; Repeat (New
             Line)</button>
-          <button onClick={handleClick1} className="bg-green-500 rounded text-white p-2 px-4" type="button" id="repeatButton2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 inline">
+          <button onClick={handleClick1} className="bg-green-500 rounded text-white p-2 px-4 mx-2" type="button" id="repeatButton2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 inline">
   <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5" />
 </svg>
 &nbsp; Repeat
             (Same Line)</button>
         </div>
-        <br />
+        </div>
         <textarea className="border border-red-500 w-full rounded p-2" id="text1" placeholder="Output Here" autoComplete="off" rows="5"></textarea>
         <br />
         <div>
@@ -133,7 +135,7 @@ $("#number").val('');
       {/* <script src='https://unpkg.com/clipboard@2.0.11/dist/clipboard.min.js' async ></script> */}
       {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" async ></script> */}
       {/* <script src="/js/text-repeater/js.js" defer ></script> */}
-
+      </div>
     </>
   )
 }

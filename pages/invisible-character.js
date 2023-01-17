@@ -67,7 +67,7 @@ export default function invisiblecharacter() {
     </Head>
 
     <ToastContainer />
-      
+      <div className='p-4'>
   
         <h1>What Is Text Repeater?</h1>
         <p className="text-justify">Hey user, if you are want to repeat letter, emoji, and symbol. then you are on the right website here you can repeat your text unlimited times.</p>
@@ -120,6 +120,7 @@ export default function invisiblecharacter() {
         <br />
         <h1 className='text-xl font-bold'>How To Use Invisible Text Generator?</h1>
         <p className="text-justify">Enter the number in the first box when you want to generate invisible text.</p>
+        </div>
     </>
   )
 }
