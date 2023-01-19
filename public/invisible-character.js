@@ -2,7 +2,6 @@ import Head from 'next/head'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ClipboardJS from 'clipboard';
-import $ from "jquery";
 const newline = () =>  { 
 var Text = " ";
   
@@ -54,9 +53,9 @@ const reset = () =>  {
 
   document.getElementById("repeatButton2").innerHTML = "Repeat (Same Line)";
 
-  $("#text").val('');
-  $("#text1").val('');
-  $("#number").val('');
+  document.querySelector("#text").value= "";
+  document.querySelector("#text1").value= "";
+  document.querySelector("#number").value= "";
 }
 
 export default function invisiblecharacter() {
