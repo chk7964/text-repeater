@@ -7,7 +7,7 @@ User-agent: SemrushBot
 Disallow: /
 
 # Host
-Host: https://tools.fontbasket.com
+Host: https://text-repeater.lotusbit.com/
 
 # Sitemaps
-Sitemap: https://tools.fontbasket.com/sitemap.xml
+Sitemap: https://text-repeater.lotusbit.com/sitemap.xml
